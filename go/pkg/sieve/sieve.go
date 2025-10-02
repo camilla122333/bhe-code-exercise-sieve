@@ -17,7 +17,7 @@ type Sieve interface {
 }
 
 // NewSieve creates and returns a Sieve implementation, precomputing primes once
-// up to maxPrimeIndex. This ensures performace for repeated calls to NthPrime
+// up to maxPrimeIndex. This ensures performance for repeated calls to NthPrime
 func NewSieve() Sieve {
 	p := findPrimes(maxPrimeIndex)
 	return &eratosthenesSieve{primes: p}
